@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export BITCOIND_PATH=${BITCOIND_PATH:="/root/.bitcoin/"}
+export BITCOIND_PATH=${BITCOIND_PATH:="/root/.xep/"}
 export RPC_HOST=${RPC_HOST:="127.0.0.1"}
 
 # Run "setup.py develop" if we need to

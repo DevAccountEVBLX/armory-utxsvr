@@ -25,7 +25,7 @@ from armoryutxsvr import config
 sys.path.append("/usr/lib/armory/")
 from armoryengine.ALL import *
 
-BITCOIND_PATH = "/root/.bitcoin/" if not os.environ.get('BITCOIND_PATH', '') else os.environ['BITCOIND_PATH']
+BITCOIND_PATH = "/root/.xep/" if not os.environ.get('BITCOIND_PATH', '') else os.environ['BITCOIND_PATH']
 RPC_HOST = "127.0.0.1" if not os.environ.get('RPC_HOST', '') else os.environ['RPC_HOST']
 
 app = flask.Flask(__name__)
@@ -134,7 +134,7 @@ def main():
     print("**** Starting up ...")
     parser = argparse.ArgumentParser(description='Armory offline transaction generator daemon')
     parser.add_argument('--testnet', action='store_true', help='Run for testnet')
-    parser.add_argument('bitcoind_url', help='bitcoind RPC endpoint URL, e.g. "http://rpc:rpcpass@localhost:8332"')
+    parser.add_argument('bitcoind_url', help='bitcoind RPC endpoint URL, e.g. "http://rpc:rpcpass@localhost:16816"')
     parser_args = parser.parse_args()
 
     btcdir = os.path.join(BITCOIND_PATH, "testnet3" if parser_args.testnet else '')

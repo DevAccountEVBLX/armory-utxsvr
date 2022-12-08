@@ -1,6 +1,6 @@
 FROM counterparty/base
 
-MAINTAINER Counterparty Developers <dev@counterparty.io>
+MAINTAINER Electra Protocol Developers <team@electraprotocol.com>
 
 # Install extra dependencies
 RUN apt-get update && apt-get -y install python python-pip
